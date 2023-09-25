@@ -1,0 +1,76 @@
+@import "../../style/CommonStyle.module.less";
+@import "../../style/utils.module.less";
+
+.datePicker {
+  display: flex;
+  align-items: center;
+
+  .textLayer {
+    width: 340px;
+    height: 52px;
+    line-height: 1;
+    position: relative;
+    overflow: hidden;
+    margin-right: 20px;
+
+    .text {
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      .font(@fontFamily: "LGSmartUIR", @fontSize: 46px, @color: #212120, @fontWeight: 600);
+    }
+
+    .text:first-child {
+      transform: translateX(-100%);
+    }
+
+    .text:last-child {
+      transform: translateX(100%);
+    }
+
+    .text.inc {
+      transition: all 300ms ease;
+      transform: translateX(-100%);
+
+      &:first-child {
+        transform: translateX(-200%);
+      }
+
+      &:last-child {
+        transform: translateX(0%);
+      }
+    }
+
+    .text.dec {
+      transition: all 300ms ease;
+      transform: translateX(100%);
+
+      &:first-child {
+        transform: translateX(0%);
+      }
+
+      &:last-child {
+        transform: translateX(200%);
+      }
+    }
+  }
+
+  .middleTextWidth {
+    width: 420px;
+  }
+
+  .largeTextWidth {
+    width: 500px;
+  }
+
+  .chevron {
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+.blurCss {
+  pointer-events: none;
+  filter: opacity(0.2);
+}

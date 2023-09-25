@@ -1,0 +1,6 @@
+{
+	"main": "TPopUp.jsx",
+	"styles": [
+		"TPopUp.module.less"
+	]
+}

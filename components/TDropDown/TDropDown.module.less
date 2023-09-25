@@ -1,0 +1,93 @@
+@import "../../style/CommonStyle.module.less";
+@WIDTH: 212px;
+@FONT_FAMILY: "LGSmartUIR";
+@FONT_COLOR: #222;
+@BACKGROUND_COLOR: #e6e6e6;
+@HEIGHT: 60px;
+@BORDER_RADIUS: ~"calc(@{HEIGHT} / 2)";
+@FONT_SIZE: 25px;
+
+.tDrapdown {
+  margin-left: 0px !important;
+  display: flex !important;
+  align-items: center !important;
+  > div > div:first-child {
+    width: @WIDTH !important;
+    height: @HEIGHT;
+    border-radius: @BORDER_RADIUS;
+    padding: 0px;
+    margin: 0px;
+    font-family: @FONT_FAMILY;
+    font-size: @FONT_SIZE;
+    font-weight: normal;
+    background-color: @BACKGROUND_COLOR;
+    color: @FONT_COLOR !important;
+    > div:first-child {
+      background-color: transparent !important;
+      border-radius: @BORDER_RADIUS;
+      box-shadow: none !important;
+    }
+    > div:nth-child(2) {
+      margin-left: 27px;
+      > div {
+        margin-right: 20px !important; //icon
+        margin-left: 0px !important;
+        font-size: @FONT_SIZE;
+      }
+    }
+    &:focus {
+      border: 5px solid @fitTv-spotlight-color;
+    }
+  }
+}
+
+[id="floatLayer"] {
+  > div[id] {
+    > div:nth-child(2) > div:nth-child(1) {
+      //dropdown
+      font-family: @FONT_FAMILY;
+      font-size: @FONT_SIZE;
+      background-color: @BACKGROUND_COLOR;
+      color: @fitTv-spotlight-color !important;
+      padding: 0;
+      margin-top: 10px;
+      > div {
+        width: @WIDTH;
+        height: auto !important;
+        > div:nth-child(2) > div {
+          //scroll
+          background-color: transparent !important;
+          > div {
+            background-color: #222;
+          }
+        }
+      }
+    }
+    > div:nth-child(2)
+      > div:nth-child(1)
+      > div
+      > div
+      > div
+      > div
+      > div:nth-child(1) {
+      //font
+      color: @FONT_COLOR !important;
+      font-size: @FONT_SIZE !important;
+      font-weight: normal;
+      margin: 0px !important;
+      -webkit-margin-start: 0px !important;
+      margin-inline-start: 0px !important;
+      > div:first-child {
+        background-color: transparent !important;
+      }
+      > div:nth-child(3) > div {
+        //check icon
+        font-size: @FONT_SIZE;
+      }
+      &:focus {
+        background-color: @FONT_COLOR !important;
+        color: #ffffff !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+@import "../../style/CommonStyle.module.less";
+@import "../../style/utils.module.less";
+
+[id="floatLayer"] {
+  //common layout
+  > div:not([id]) > div:nth-child(2) {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}
+
+.tPopUp {
+  //enact popup reset
+  margin-bottom: 0 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  > div {
+    padding: 0 !important;
+    > div > div {
+      width: unset !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+.default-style() {
+  .info {
+    background: @colorffffff;
+    color: @color222222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px 40px 40px;
+    border-radius: 30px;
+
+    &:focus {
+      background-color: darkgray !important;
+      box-shadow: 0 0 0 4px @fitTv-spotlight-color inset;
+      .title {
+        color: @fitTv-spotlight-text-color;
+      }
+    }
+  }
+  .textLayer {
+    font-family: "LGSmartUIR";
+    width: 100%;
+
+    .centerTitle {
+      margin-top: 20px;
+      text-align: center !important;
+    }
+
+    .title {
+      margin-bottom: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .text {
+      max-height: 100%;
+      height: auto;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .subText {
+      font-size: 19px;
+      color: @colorb4b4b4;
+    }
+  }
+
+  img {
+    width: 465px;
+    height: auto;
+  }
+
+  .buttonLayer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+
+.calendarPopUp {
+  .default-style();
+}
+
+.textPopUp {
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px 40px 40px;
+    gap: 50px;
+    background-color: #fefefe;
+    border-radius: 30px;
+  }
+  .textLayer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .title {
+      width: 520px;
+      height: auto;
+      font-size: 36px;
+      font-family: "LGSmartUIB";
+      text-align: center;
+    }
+    .text {
+      width: 520px;
+      height: auto;
+      font-size: 28px;
+      font-family: "LGSmartUIR";
+    }
+  }
+  .buttonLayer {
+    display: flex;
+    gap: 20px;
+
+    .button1,
+    .button2 {
+      max-width: none;
+    }
+  }
+}
+
+.imagePopUp {
+  .default-style();
+}
+
+.smartMatPopUp {
+  .default-style();
+  .title {
+    margin: 50px 20px;
+    font-size: 32px !important;
+    font-weight: bold;
+  }
+  .text {
+    margin: 10px 20px !important;
+    font-size: 24px !important;
+  }
+  .text1 {
+    margin: 0 20px;
+    font-size: 24px !important;
+  }
+  .buttonLayer {
+    width: 55% !important;
+    margin-top: 30px;
+  }
+  img {
+    margin: 60px 0;
+    width: 600px !important;
+    height: auto;
+  }
+}
+
+.connectPopup {
+  .default-style();
+  font-family: "LGSmartUIR";
+  .connectedText {
+    margin-top: 20px;
+    font-size: 24px !important;
+  }
+}
+
+.testSelectPopup {
+  .default-style();
+
+  .buttonLayer {
+    width: 80% !important;
+    margin: 30px 0 10px 0;
+  }
+}

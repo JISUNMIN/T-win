@@ -1,0 +1,73 @@
+@scrollBar : 0.625rem; //scrollbar width (15px)
+@scrollCircle : 1.6667rem; //scrollbar circle (40 * 40)
+@barColor: transparent;
+@focusedBarColor: #transparent;
+@verTrackColor: #f1efec;
+.tScroller {
+	> div:nth-child(2) {
+		//scroller
+		background-color: none;
+		&:hover,
+		&:active {
+			div > div {
+				//scrollbar
+				background-color: #ff8f98 !important;
+				position: relative;
+				left: 0 !important;
+				width: 6px !important;
+				border: 50%;
+				> div {
+						opacity: 0;
+				}
+			}
+		}
+	> div {
+			//scrollbar container
+			background-color: #bfbfbf;
+			position: relative;
+
+			> div {
+				//scrollbar
+				position: relative;
+				&:focus {
+					background-color: #ff8f98 !important;
+					position: relative;
+					left: 0 !important;
+					width: 6px !important;
+					border: 50%;
+					> div {
+							opacity: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.onMove {
+	> div:nth-child(2) {
+		//scroller
+		background-color: none;
+
+		> div {
+			//scrollbar container
+			background-color: #bfbfbf;
+			position: relative;
+
+			> div {
+				//scrollbar
+				position: relative;
+
+				background-color: #ff8f98 !important;
+				position: relative;
+				left: 0 !important;
+				width: 6px !important;
+				border: 50%;
+				> div {
+						//span role="alert"
+						opacity: 0;
+				}
+			}
+		}
+	}
+}

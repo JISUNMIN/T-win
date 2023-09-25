@@ -1,0 +1,35 @@
+@import "../../style/CommonStyle.module.less";
+@import "../../style/utils.module.less";
+
+.tcheckbox{
+	width: auto;
+	.wrapper{
+		width: auto;
+		position: relative;
+		display: flex;
+		.checkboxBG{
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			border: solid 1px black;
+		}
+		.selected{
+			width: 42px;
+			height: 42px;
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url("../../../assets/icon/checkbox.png");
+		}
+	}
+	&:focus{
+		.checkboxBG{
+      width: 40px;
+			height: 40px;
+      background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url("../../../assets/icon/checkbox.png");
+			// border: solid 1px black;
+		}
+	}
+}
