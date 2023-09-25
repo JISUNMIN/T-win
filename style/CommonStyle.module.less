@@ -1,0 +1,340 @@
+//PRIMARY COLOR
+//BROWN
+@PRIMARY_COLOR_BROWN01: #B59D85;
+@PRIMARY_COLOR_BROWN02: #8A6F5E;
+@PRIMARY_COLOR_BROWN03: #63544B;
+//GREEN
+@PRIMARY_COLOR_GREEN01: #436755;
+@PRIMARY_COLOR_GREEN02: #11A27E;
+@PRIMARY_COLOR_GREEN03: #21FFCD;
+
+//BG COLOR
+@BG_COLOR_01: @COLOR_GRAY01;
+@BG_COLOR_02: #EFE7DF;
+@BG_COLOR_03: #E4DBD2;
+@BG_COLOR_04: #D4C8BD;
+@BG_COLOR_05: #B7AA9F;
+
+//GRAY COLOR
+@COLOR_GRAY01: #FEFEFE;
+@COLOR_GRAY02: #F2EFED;
+@COLOR_GRAY03: #DBD7D4;
+@COLOR_GRAY04: #B2B0AE;
+@COLOR_GRAY05: #787776;
+@COLOR_GRAY06: #494847;
+@COLOR_GRAY07: #363533;
+@COLOR_GRAY08: #212120;
+@COLOR_GRAY09: #000000; // BLACK
+
+//BTN
+@BTN_MAIN: @COLOR_GRAY07;
+@BTN_COLOR_FONT: #FFFFFF; // WHITE
+@BTN_COLOR_SUB: @PRIMARY_COLOR_GREEN01;
+
+@MAIN_COLOR: @BG_COLOR_02; //COMMON BG COLOR
+
+
+// 이하 이전 작업물
+// @borderRadius : 0.83rem; //20px
+@fitTv-selected-color: green;
+@fitTv-spotlight-color: #4D413C;
+@fitTv-disabled-color: #221b1b;
+@fitTv-normal-text-color: black;
+@fitTv-spotlight-text-color: white;
+// repot tab 기본 배경 컬러
+@fitTv-tab-color : #dcdbd2;
+// tabLayout
+@fitTv-tab-focus-color: @fitTv-spotlight-color;
+@fitTv-tab-background-color: #E9E5DD;
+@fitTv-tab-secondDepth-background-color: #DDD9CFE6;
+@fitTv-tab-selected-background-color: #FEFEFE;
+@fitTv-tab-font-color: @fitTv-spotlight-color;
+@fitTv-tab-secondDepth-font-color: #82817E;
+@fitTv-tab-selected-font-color: #B29C5F;
+
+@fitTv-tHeader-height: 129px;
+@fitTv-tBody-padding-topbottom: 30px;
+@fitTv-tBody-padding-leftright: 75px;
+//자주 사용되는 공통 컬러
+@color6c6c6c : #6c6c6c;
+@color64635E : #64635E;
+@colorFEFDFA : #FEFDFA;
+@color3B87AB : #3B87AB;
+@colorffffff : #fff;
+@color83827D : #83827D;
+@color706F69 : #706F69;
+@colore0ded5 : #e0ded5;
+@color54534d : #54534d;
+@color222222 : #222;
+@colorb4b4b4 : #b4b4b4;
+@color403e3d : #403e3d;
+@colorE0DED6 : #E0DED6;
+@color737373 : #737373;
+
+@PANEL_PADDING_TB: 50px;
+@PANEL_PADDING_LR: 70px;
+
+@fitTv_tBodyWithHeader: {
+	height: ~"calc(100% - @{fitTv-tHeader-height} - @{fitTv-tBody-padding-topbottom} * 2)";
+}
+ol, ul, li {
+	list-style: none;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/*
+	cl_LRPaddingOutWrap : 좌우 패딩
+*/
+.cl_LRPaddingOutWrap {
+	width: 100%;
+	padding: 0 2.917rem;
+	box-sizing: border-box;
+}
+
+/*
+	레이아웃 세로 정렬
+*/
+.cl_layoutColumn {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+/*
+	공통 header
+	적용: BodyAlignment
+*/
+
+
+//하단부 버튼 영역 공통 레이아웃
+.cl_btnArea {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70px;
+
+	.firstArea {
+		margin-right: 1.25rem;
+	}
+	//workout버튼 크기 단독 수정시 주석 해제
+	// > div {
+	// 	> div:nth-child(2) {
+	// 		.size(@w: 17.5rem, @h: inherit);
+	// 	}
+	// }
+
+	.borderButton {
+		border: 0.16666rem solid @colore0ded5;
+		background-color: @colorffffff;
+		box-sizing: border-box;
+	}
+
+	.infoButton {
+		> div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 24px;
+			box-sizing: border-box;
+			white-space: nowrap;
+		}
+	}
+}
+
+
+/*
+	버튼 외곽 border 지정
+	적용page: BodyAlignment
+*/
+.borderShapeButton {
+	width: 12.92rem;
+	height: 3.458rem;
+	border: 0.16666rem solid @colore0ded5;
+	background-color: @colorffffff;
+	box-sizing: border-box;
+	color: @colorb4b4b4;
+}
+
+/*
+	modal 배경
+*/
+.cl_modalDimmer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+
+.cl_innerModal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: auto;
+	height: auto;
+	box-sizing: border-box;
+	background-color: @colorffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/*
+	MainPage animation
+	적용page: BodyAlignment > PreviewReport.jsx,
+*/
+.cl_guideText (@fontFamily, @color, @fontSize, @fontWeight) {
+	font-family: 'LGSmartUIR';
+	color: @color83827D;
+	font-size: 1.0833rem;
+	font-weight: 400;
+}
+
+
+/*
+	MainPage animation
+	적용page: MainPage bodyAlignment 클릭시 keyframes
+*/
+.bodyAlignmentContainer:focus .test {
+	animation: moveLeft 1s;
+}
+
+@keyframes moveLeft {
+	0% {
+	  transform: translateZ(0);
+	}
+	100% {
+	  transform: translate3d(5%, 0, 0);
+	}
+}
+
+
+/*
+	공통 :: Baseline
+	적용page: BodyAlignment_002, BodyAlignment_003
+*/
+.cl_baseLine {
+	position: relative;
+	font-family: 'LGSmartUIR';
+	font-size: 0.916rem;
+	color: #83827D;
+	font-weight: 400;
+	margin-left: auto;
+	margin-bottom: 0.666rem;
+
+	&::before {
+		content: '';
+		width: 2.3333rem;
+		height: 0.16666rem;
+		background-size: 2.3333rem 0.16666rem;
+		background-image: url("data:image/svg+xml,%0A%3Csvg width='56' height='4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2383827D' stroke-width='4' stroke-linecap='round' stroke-dasharray='0.05 6' d='M2 2h52'/%3E%3C/svg%3E");
+		position: absolute;
+		top: 5%;
+		right: 100%;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+	}
+}
+
+/*
+	공통 :: 좌, 우측 화살표 공통
+	적용page: LGFIT_bodyalignment_005_1, LGFIT_bodyalignment_003_1​
+*/
+.cl_chevronCommon {
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 1.25rem;
+	background-color: #e0ded5;
+	background-size: 0.75rem 1.1667rem;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.cl_arrowWhite{
+	background-image: url("data:image/svg+xml,%0A%3Csvg width='18' height='28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 4 4 14l10 10' stroke='%23fff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.cl_arrowGray {
+	background-image: url("data:image/svg+xml,%0A%3Csvg width='18' height='28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m4 4 10 10L4 24' stroke='%236C6C6C' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+//팝업창 뜰때 아이콘 버튼 상태
+.disabledIcon {
+    opacity: 0.5;
+}
+
+/*
+	공통 :: tab 하단부 영역
+*/
+.commonContentsLayout {
+	position: relative;
+	z-index: 10;
+	background-color: #FEFDFA;
+	width: 100%;
+	height: 695px;
+	padding: 1.3333rem 1.5833rem;
+	box-sizing: border-box;
+}
+/*
+	적용page: LGFIT_bodyalignment_005
+*/
+.cl_contentsLayoutType00 {
+	.commonContentsLayout();
+	border-radius: 0 0 0.833rem 0.833rem;
+}
+
+/*
+	적용page: LGFIT_pysicaltest_006​
+*/
+.cl_contentsLayoutType01 {
+	.commonContentsLayout();
+	border-radius: 0 0.833rem 0.833rem 0.833rem;
+}
+
+//flux Number
+@font-face {
+	font-family: 'fluxNumberL';
+	src: url('../../assets/fonts/LGFluxNumberLight.woff') format("woff");
+}
+@font-face {
+	font-family: 'fluxNumberR';
+	src: url('../../assets/fonts/LGFluxNumberRegular.woff') format("woff");
+}
+@font-face {
+	font-family: 'fluxNumberB';
+	src: url('../../assets/fonts/LGFluxNumberBold.woff') format("woff");
+}
+//LG smart_UI
+@font-face {
+	font-family: 'LGSmartUIL';
+	src: url('../../assets/fonts/LGSmartUILight.woff') format("woff");
+}
+@font-face {
+	font-family: 'LGSmartUIR';
+	src: url('../../assets/fonts/LGSmartUIRegular.woff') format("woff");
+}
+@font-face {
+	font-family: 'LGSmartUISB';
+	src: url('../../assets/fonts/LGSmartUISemiBold.woff') format("woff");
+}
+@font-face {
+	font-family: 'LGSmartUIB';
+	src: url('../../assets/fonts/LGSmartUIBold.woff') format("woff");
+}

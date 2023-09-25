@@ -1,0 +1,48 @@
+//mixin 공통으로 사용할 수 있는 범용적 css ========================================================
+.flex(@display: flex, @justifyCenter: center, @alignCenter: center, @direction: row) {
+    display: @display;
+	justify-content: @justifyCenter;
+	align-items: @alignCenter;
+    flex-direction: @direction;
+}
+.size(@w: 50px, @h: 50px) {
+    width: @w;
+    height: @h;
+}
+.position(@position: relative, @top: 0, @right: 0, @bottom: 0, @left: 0){
+    position:@position;
+    top:@top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+}
+
+//border-solid
+.border-solid(@size, @color) {
+    border: @size solid @color;
+    box-sizing: border-box;
+}
+
+//font
+.font (@fontFamily, @fontSize, @color, @fontWeight) {
+    font-family: @fontFamily;
+    font-size: @fontSize;
+    color: @color;
+    font-weight: @fontWeight;
+}
+
+//말줄임
+.elip(@clamp) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    // -webkit-box-orient: vertical;
+    // display: -webkit-box;
+    -webkit-line-clamp: @clamp;
+}
+
+//background 이미지 삽입 
+.imgElement (@backgroundW, @backgroundH, @positionX, @positionY){
+	background-size: @backgroundW, @backgroundH;
+	background-repeat: no-repeat;
+    background-position: @positionX @positionY;
+}
